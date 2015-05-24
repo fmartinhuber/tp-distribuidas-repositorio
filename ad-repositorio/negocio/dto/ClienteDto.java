@@ -8,9 +8,9 @@ public class ClienteDto implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private String tipoDocumento;
-	private int nroDocumento;
+	private String nroDocumento;
 	
-	public ClienteDto(String tipoDocumento, int nroDocumento) {
+	public ClienteDto(String tipoDocumento, String nroDocumento) {
 		this.tipoDocumento = tipoDocumento;
 		this.nroDocumento = nroDocumento;
 	}
@@ -24,11 +24,11 @@ public class ClienteDto implements Serializable{
 		this.tipoDocumento = tipoDocumento;
 	}
 	
-	public int getNroDocumento() {
+	public String getNroDocumento() {
 		return nroDocumento;
 	}
 	
-	public void setNroDocumento(int nroDocumento) {
+	public void setNroDocumento(String nroDocumento) {
 		this.nroDocumento = nroDocumento;
 	}
 	
