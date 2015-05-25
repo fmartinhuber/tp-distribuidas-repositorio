@@ -1,7 +1,6 @@
 package dto;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class ClienteDto implements Serializable{
 
@@ -14,7 +13,10 @@ public class ClienteDto implements Serializable{
 		this.tipoDocumento = tipoDocumento;
 		this.nroDocumento = nroDocumento;
 	}
-
+	
+	public ClienteDto() {
+		
+	}
 
 	public String getTipoDocumento() {
 		return tipoDocumento;
