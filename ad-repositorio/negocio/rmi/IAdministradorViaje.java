@@ -1,6 +1,7 @@
 package rmi;
 
 import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.util.List;
 
 import dto.ProveedorDto;
@@ -11,26 +12,26 @@ import dto.ViajeDto;
 
 public interface IAdministradorViaje extends Remote{
 
-	public List <ViajeDto> listarSolicitudesDeViajePorSucursal(SucursalDto sucursal);
+	public List <ViajeDto> listarSolicitudesDeViajePorSucursal(SucursalDto sucursal) throws RemoteException;
 
-	public void generarViaje();
+	public void generarViaje() throws RemoteException;
 		
-	public ProveedorDto buscarProveedor(String cuit);
+	public ProveedorDto buscarProveedor(String cuit) throws RemoteException;
 	
-	public List <ServicioDto> solicitarServicios();
+	public List <ServicioDto> solicitarServicios() throws RemoteException;
 	
-	public List <ServicioDto> solicitarServiciosAdicionales();
+	public List <ServicioDto> solicitarServiciosAdicionales() throws RemoteException;
 	
-	public void asignarVehiculo (ViajeDto viaje, VehiculoDto vehiculo);
+	public void asignarVehiculo (ViajeDto viaje, VehiculoDto vehiculo) throws RemoteException;
 	
-	public void creacionRemito();
+	public void creacionRemito() throws RemoteException;
 	
-	public float calcularPrecio (ViajeDto viaje);
+	public float calcularPrecio (ViajeDto viaje) throws RemoteException;
 	
-	public List <ProveedorDto> obtenerProveedores ();
+	public List <ProveedorDto> obtenerProveedores () throws RemoteException;
 	
-	public List <SucursalDto> obtenerSurcusales();
+	public List <SucursalDto> obtenerSurcusales() throws RemoteException;
 	
-	public List <VehiculoDto> obtenerVehiculos();
+	public List <VehiculoDto> obtenerVehiculos() throws RemoteException;
 	
 }
