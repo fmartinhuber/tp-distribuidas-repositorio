@@ -6,17 +6,19 @@ import java.util.Date;
 
 
 public class VehiculoDto implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
 	private String dominio;
 	private String marca;
 	private String modelo;
 	private int anio;
-	private int cedulaVerde;
+	private String cedulaVerde;
 	private Date vencimientoCedulaVerde;
 	private float peso;
 	private float tara;
 	private float volumenDeCarga;
 	private String caracteristicas;
-	private PlanMantenimientoDto plan;
 	private float disponibilidadVolumen;
 	private float disponibilidadTara;
 	private float capacidadDisponible;
@@ -46,10 +48,10 @@ public class VehiculoDto implements Serializable{
 	public void setAnio(int anio) {
 		this.anio = anio;
 	}
-	public int getCedulaVerde() {
+	public String getCedulaVerde() {
 		return cedulaVerde;
 	}
-	public void setCedulaVerde(int cedulaVerde) {
+	public void setCedulaVerde(String cedulaVerde) {
 		this.cedulaVerde = cedulaVerde;
 	}
 	public Date getVencimientoCedulaVerde() {
@@ -82,12 +84,6 @@ public class VehiculoDto implements Serializable{
 	public void setCaracteristicas(String caracteristicas) {
 		this.caracteristicas = caracteristicas;
 	}
-	public PlanMantenimientoDto getPlan() {
-		return plan;
-	}
-	public void setPlan(PlanMantenimientoDto plan) {
-		this.plan = plan;
-	}
 	public float getDisponibilidadVolumen() {
 		return disponibilidadVolumen;
 	}
@@ -119,11 +115,10 @@ public class VehiculoDto implements Serializable{
 		this.enViaje = enViaje;
 	}
 	public VehiculoDto(String dominio, String marca, String modelo, int anio,
-			int cedulaVerde, Date vencimientoCedulaVerde, float peso,
+			String cedulaVerde, Date vencimientoCedulaVerde, float peso,
 			float tara, float volumenDeCarga, String caracteristicas,
-			PlanMantenimientoDto plan, float disponibilidadVolumen,
-			float disponibilidadTara, float capacidadDisponible,
-			boolean enMantenimiento, boolean enViaje) {
+			float disponibilidadVolumen, float disponibilidadTara,
+			float capacidadDisponible, boolean enMantenimiento, boolean enViaje) {
 		super();
 		this.dominio = dominio;
 		this.marca = marca;
@@ -135,11 +130,13 @@ public class VehiculoDto implements Serializable{
 		this.tara = tara;
 		this.volumenDeCarga = volumenDeCarga;
 		this.caracteristicas = caracteristicas;
-		this.plan = plan;
 		this.disponibilidadVolumen = disponibilidadVolumen;
 		this.disponibilidadTara = disponibilidadTara;
 		this.capacidadDisponible = capacidadDisponible;
 		this.enMantenimiento = enMantenimiento;
 		this.enViaje = enViaje;
+	}
+	public VehiculoDto() {
+		
 	}
 }
