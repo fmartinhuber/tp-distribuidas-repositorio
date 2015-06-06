@@ -1,6 +1,5 @@
 package dto;
 
-import java.io.File;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -15,12 +14,16 @@ public class SolicitudDeCargaDto implements Serializable{
 	private DireccionDto direccion;
 	private Date fechaEntregaProbable;
 	private Date fechaEntregaMaxima;
+<<<<<<< HEAD
 	private File manifiesto;
+=======
+	private String manifiesto;
+>>>>>>> branch 'master' of https://github.com/fmartinhuber/tp-distribuidas-repositorio
 	private String estadoSolcitud;
 	private String dniCliente;
 	
 	public SolicitudDeCargaDto(ClienteDto cliente, List<CargaDto> cargas, List<HabilitadoDto> habilitados, 
-			DireccionDto direccion, Date fechaEntregaProbable, Date fechaEntregaMaxima, File manifiesto, 
+			DireccionDto direccion, Date fechaEntregaProbable, Date fechaEntregaMaxima, String manifiesto, 
 			String estadoSolcitud) {
 
 		this.cliente = cliente;
@@ -81,11 +84,11 @@ public class SolicitudDeCargaDto implements Serializable{
 		this.fechaEntregaMaxima = fechaEntregaMaxima;
 	}
 
-	public File getManifiesto() {
+	public String getManifiesto() {
 		return manifiesto;
 	}
 
-	public void setManifiesto(File manifiesto) {
+	public void setManifiesto(String manifiesto) {
 		this.manifiesto = manifiesto;
 	}
 

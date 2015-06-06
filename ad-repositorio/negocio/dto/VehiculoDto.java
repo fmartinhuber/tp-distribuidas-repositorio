@@ -6,6 +6,9 @@ import java.util.Date;
 
 
 public class VehiculoDto implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
 	private String dominio;
 	private String marca;
 	private String modelo;
@@ -16,7 +19,6 @@ public class VehiculoDto implements Serializable{
 	private float tara;
 	private float volumenDeCarga;
 	private String caracteristicas;
-	private PlanMantenimientoDto plan;
 	private float disponibilidadVolumen;
 	private float disponibilidadTara;
 	private float capacidadDisponible;
@@ -82,12 +84,6 @@ public class VehiculoDto implements Serializable{
 	public void setCaracteristicas(String caracteristicas) {
 		this.caracteristicas = caracteristicas;
 	}
-	public PlanMantenimientoDto getPlan() {
-		return plan;
-	}
-	public void setPlan(PlanMantenimientoDto plan) {
-		this.plan = plan;
-	}
 	public float getDisponibilidadVolumen() {
 		return disponibilidadVolumen;
 	}
@@ -118,12 +114,20 @@ public class VehiculoDto implements Serializable{
 	public void setEnViaje(boolean enViaje) {
 		this.enViaje = enViaje;
 	}
+<<<<<<< HEAD
 	public VehiculoDto(String dominio, String marca, String modelo,
 			int anio, String cedulaVerde, Date vencimientoCedulaVerde,
 			float peso, float tara, float volumenDeCarga,
 			String caracteristicas, float disponibilidadVolumen,
 			float disponibilidadTara, float capacidadDisponible,
 			boolean enMantenimiento, boolean enViaje) {
+=======
+	public VehiculoDto(String dominio, String marca, String modelo, int anio,
+			String cedulaVerde, Date vencimientoCedulaVerde, float peso,
+			float tara, float volumenDeCarga, String caracteristicas,
+			float disponibilidadVolumen, float disponibilidadTara,
+			float capacidadDisponible, boolean enMantenimiento, boolean enViaje) {
+>>>>>>> branch 'master' of https://github.com/fmartinhuber/tp-distribuidas-repositorio
 		super();
 		this.dominio = dominio;
 		this.marca = marca;
@@ -135,11 +139,13 @@ public class VehiculoDto implements Serializable{
 		this.tara = tara;
 		this.volumenDeCarga = volumenDeCarga;
 		this.caracteristicas = caracteristicas;
-		this.plan = plan;
 		this.disponibilidadVolumen = disponibilidadVolumen;
 		this.disponibilidadTara = disponibilidadTara;
 		this.capacidadDisponible = capacidadDisponible;
 		this.enMantenimiento = enMantenimiento;
 		this.enViaje = enViaje;
+	}
+	public VehiculoDto() {
+		
 	}
 }
