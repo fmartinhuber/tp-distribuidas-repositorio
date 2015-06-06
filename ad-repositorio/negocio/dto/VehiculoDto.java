@@ -10,7 +10,7 @@ public class VehiculoDto implements Serializable{
 	private String marca;
 	private String modelo;
 	private int anio;
-	private int cedulaVerde;
+	private String cedulaVerde;
 	private Date vencimientoCedulaVerde;
 	private float peso;
 	private float tara;
@@ -46,10 +46,10 @@ public class VehiculoDto implements Serializable{
 	public void setAnio(int anio) {
 		this.anio = anio;
 	}
-	public int getCedulaVerde() {
+	public String getCedulaVerde() {
 		return cedulaVerde;
 	}
-	public void setCedulaVerde(int cedulaVerde) {
+	public void setCedulaVerde(String cedulaVerde) {
 		this.cedulaVerde = cedulaVerde;
 	}
 	public Date getVencimientoCedulaVerde() {
@@ -118,10 +118,10 @@ public class VehiculoDto implements Serializable{
 	public void setEnViaje(boolean enViaje) {
 		this.enViaje = enViaje;
 	}
-	public VehiculoDto(String dominio, String marca, String modelo, int anio,
-			int cedulaVerde, Date vencimientoCedulaVerde, float peso,
-			float tara, float volumenDeCarga, String caracteristicas,
-			PlanMantenimientoDto plan, float disponibilidadVolumen,
+	public VehiculoDto(String dominio, String marca, String modelo,
+			int anio, String cedulaVerde, Date vencimientoCedulaVerde,
+			float peso, float tara, float volumenDeCarga,
+			String caracteristicas, float disponibilidadVolumen,
 			float disponibilidadTara, float capacidadDisponible,
 			boolean enMantenimiento, boolean enViaje) {
 		super();

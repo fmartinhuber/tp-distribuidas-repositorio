@@ -15,8 +15,9 @@ public class SolicitudDeCargaDto implements Serializable{
 	private DireccionDto direccion;
 	private Date fechaEntregaProbable;
 	private Date fechaEntregaMaxima;
-	private File manifiesto; //Daro: Como pensamos manejar esto?. No es mas facil hacer un String?
+	private File manifiesto;
 	private String estadoSolcitud;
+	private String dniCliente;
 	
 	public SolicitudDeCargaDto(ClienteDto cliente, List<CargaDto> cargas, List<HabilitadoDto> habilitados, 
 			DireccionDto direccion, Date fechaEntregaProbable, Date fechaEntregaMaxima, File manifiesto, 
@@ -94,6 +95,14 @@ public class SolicitudDeCargaDto implements Serializable{
 
 	public void setEstadoSolcitud(String estadoSolcitud) {
 		this.estadoSolcitud = estadoSolcitud;
+	}
+
+	public String getDniCliente() {
+		return dniCliente;
+	}
+
+	public void setDniCliente(String dniCliente) {
+		this.dniCliente = dniCliente;
 	}
 
 }
