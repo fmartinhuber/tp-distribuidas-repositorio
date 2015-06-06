@@ -14,11 +14,7 @@ public class SolicitudDeCargaDto implements Serializable{
 	private DireccionDto direccion;
 	private Date fechaEntregaProbable;
 	private Date fechaEntregaMaxima;
-<<<<<<< HEAD
-	private File manifiesto;
-=======
 	private String manifiesto;
->>>>>>> branch 'master' of https://github.com/fmartinhuber/tp-distribuidas-repositorio
 	private String estadoSolcitud;
 	private String dniCliente;
 	

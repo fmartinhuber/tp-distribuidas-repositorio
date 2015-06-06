@@ -114,20 +114,11 @@ public class VehiculoDto implements Serializable{
 	public void setEnViaje(boolean enViaje) {
 		this.enViaje = enViaje;
 	}
-<<<<<<< HEAD
-	public VehiculoDto(String dominio, String marca, String modelo,
-			int anio, String cedulaVerde, Date vencimientoCedulaVerde,
-			float peso, float tara, float volumenDeCarga,
-			String caracteristicas, float disponibilidadVolumen,
-			float disponibilidadTara, float capacidadDisponible,
-			boolean enMantenimiento, boolean enViaje) {
-=======
 	public VehiculoDto(String dominio, String marca, String modelo, int anio,
 			String cedulaVerde, Date vencimientoCedulaVerde, float peso,
 			float tara, float volumenDeCarga, String caracteristicas,
 			float disponibilidadVolumen, float disponibilidadTara,
 			float capacidadDisponible, boolean enMantenimiento, boolean enViaje) {
->>>>>>> branch 'master' of https://github.com/fmartinhuber/tp-distribuidas-repositorio
 		super();
 		this.dominio = dominio;
 		this.marca = marca;
