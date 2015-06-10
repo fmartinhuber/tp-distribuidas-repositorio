@@ -7,10 +7,10 @@ public class HabilitadoDto implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private String tipoDocumento;
-	private int nroDocumento;
+	private String nroDocumento;
 	private String apellidoNombre;
 	
-	public HabilitadoDto (String tipoDocumento, int nroDocumento, String apellidoNombre) {
+	public HabilitadoDto (String tipoDocumento, String nroDocumento, String apellidoNombre) {
 		this.tipoDocumento = tipoDocumento;
 		this.nroDocumento = nroDocumento;
 		this.apellidoNombre = apellidoNombre;
@@ -24,11 +24,11 @@ public class HabilitadoDto implements Serializable{
 		this.tipoDocumento = tipoDocumento;
 	}
 
-	public int getNroDocumento() {
+	public String getNroDocumento() {
 		return nroDocumento;
 	}
 
-	public void setNroDocumento(int nroDocumento) {
+	public void setNroDocumento(String nroDocumento) {
 		this.nroDocumento = nroDocumento;
 	}
 
