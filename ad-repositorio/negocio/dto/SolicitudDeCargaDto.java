@@ -10,7 +10,7 @@ public class SolicitudDeCargaDto implements Serializable{
 	
 	private ClienteDto cliente;
 	private List<CargaDto> cargas;
-	private List<HabilitadoDto> habilitados;
+	private String habilitados;
 	private DireccionDto direccion;
 	private Date fechaEntregaProbable;
 	private Date fechaEntregaMaxima;
@@ -18,7 +18,7 @@ public class SolicitudDeCargaDto implements Serializable{
 	private String estadoSolcitud;
 	private String dniCliente;
 	
-	public SolicitudDeCargaDto(ClienteDto cliente, List<CargaDto> cargas, List<HabilitadoDto> habilitados, 
+	public SolicitudDeCargaDto(ClienteDto cliente, List<CargaDto> cargas, String habilitados, 
 			DireccionDto direccion, Date fechaEntregaProbable, Date fechaEntregaMaxima, String manifiesto, 
 			String estadoSolcitud) {
 
@@ -48,11 +48,11 @@ public class SolicitudDeCargaDto implements Serializable{
 		this.cargas = cargas;
 	}
 
-	public List<HabilitadoDto> getHabilitados() {
+	public String getHabilitados() {
 		return habilitados;
 	}
 
-	public void setHabilitados(List<HabilitadoDto> habilitados) {
+	public void setHabilitados(String habilitados) {
 		this.habilitados = habilitados;
 	}
 

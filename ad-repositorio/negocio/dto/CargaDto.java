@@ -7,7 +7,11 @@ public class CargaDto implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	private DimensionDto dimension;
+	private float alto;
+	private float ancho;
+	private float profundidad;
+	private float peso;
+	private float volumen;
 	private boolean apilable;
 	private int cantidadApilable;
 	private String fragilidad;
@@ -16,11 +20,17 @@ public class CargaDto implements Serializable{
 	private String textoManipulacion;
 	private String permiso;
 	private File archivoPermiso;
-	
-	public CargaDto(DimensionDto dimension, boolean apilable, int cantidadApilable, String fragilidad, String tratamiento,
-			String condicionViaje, String textoManipulacion, String permiso, File archivoPermiso) {
 
-		this.dimension = dimension;
+	public CargaDto(float alto, float ancho, float profundidad, float peso,
+			float volumen, boolean apilable, int cantidadApilable,
+			String fragilidad, String tratamiento, String condicionViaje,
+			String textoManipulacion, String permiso, File archivoPermiso) {
+		super();
+		this.alto = alto;
+		this.ancho = ancho;
+		this.profundidad = profundidad;
+		this.peso = peso;
+		this.volumen = volumen;
 		this.apilable = apilable;
 		this.cantidadApilable = cantidadApilable;
 		this.fragilidad = fragilidad;
@@ -31,12 +41,44 @@ public class CargaDto implements Serializable{
 		this.archivoPermiso = archivoPermiso;
 	}
 
-	public DimensionDto getDimension() {
-		return dimension;
+	public float getAlto() {
+		return alto;
 	}
 
-	public void setDimension(DimensionDto dimension) {
-		this.dimension = dimension;
+	public void setAlto(float alto) {
+		this.alto = alto;
+	}
+
+	public float getAncho() {
+		return ancho;
+	}
+
+	public void setAncho(float ancho) {
+		this.ancho = ancho;
+	}
+
+	public float getProfundidad() {
+		return profundidad;
+	}
+
+	public void setProfundidad(float profundidad) {
+		this.profundidad = profundidad;
+	}
+
+	public float getPeso() {
+		return peso;
+	}
+
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+
+	public float getVolumen() {
+		return volumen;
+	}
+
+	public void setVolumen(float volumen) {
+		this.volumen = volumen;
 	}
 
 	public boolean isApilable() {
